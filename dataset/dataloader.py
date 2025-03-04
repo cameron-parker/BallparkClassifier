@@ -3,7 +3,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-def get_data_loaders(base_path='/projects/dsci410-510/', batch_size=256):
+def get_data_loaders(base_path='/projects/dsci410_510/', batch_size=256):
     
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
