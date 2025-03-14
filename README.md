@@ -11,24 +11,24 @@ To train the model, use the train.py script. It will use dataloader.py to gather
 ## Results
 To evaluate the model, prediction accuracy and visual inspection of predictions were primarily used. The model performed well, achieving an 83.04% accuracy on the test set with 30 classes.
 
-![Loss](images/loss.png)
+<img src="images/loss.png" alt="Loss" width="500">
 
-![Accuracy](images/accuracy.png)
+<img src="images/accuracy.png" alt="Accuracies" width="500">
 
-<img src="images/final_accuracies.png" alt="Final Accuracies" width="300">
+<img src="images/final_accuracies.png" alt="Final Accuracies" width="500">
 
 
 The final test accuracy is better than I expected when starting this project, indicating that despite 30 different ballparks and several different types of shots featured in broadcasts that can limit which ballpark features are available in each image, the CNN can effectively learn key ballpark features and classify which ballpark an image is taken from. With this dataset and task, however, there are some caveats to this conclusion, as well as some considerations for future iterations of this task to be had. 
 
 Each ballpark contains its own slightly unique camera angles that are featured in its broadcasts, meaning it is possible that a model could learn to recognize those slight variations in lieu of actual distinct ballpark features. This causes concern when less common shots are featured in the images. For example, the model excels at classifying centerfield angle images, since that is the most common camera angle in a baseball broadcast. Less common shots, like aerial shots and waist-up shots of players, pose a harder challenge for a model since the key features needed are more difficult to learn. 
 
-![YankeeStadium](images/Picture1.jpg)
+<img src="images/Picture1.jpg" alt="Yankee Stadium" width="500">
 
 This aerial shot of Yankee Stadium is found several times in the dataset, and while other stadiums contain aerial shots, this angle is very common in Yankees broadcasts and is likely overrepresented in the data. This led to several misclassifications of aerial shots, for instance this misclassification of T-Mobile Park in Seattle, which features a wide angle and the sky prominently.
 
-![TMobile](images/Picture2.jpg)
+<img src="images/Picture2.png" alt="T-Mobile Park Classification" width="500">
  
-![Tovar](images/Picture3.jpg)
+<img src="images/Picture3.jpg" alt="Tovar" width="500">
 
 This example of a waist-up shot of a hitter illustrates the challenge with this type of image, where fewer identifiable ballpark features are present. Team logos are still featured in the score bug, but this is a more detailed and harder-to-learn feature. 
 
